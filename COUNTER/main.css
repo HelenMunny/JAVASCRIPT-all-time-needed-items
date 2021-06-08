@@ -1,6 +1,15 @@
-h1 {
-  color: red;
+body {
+  background: rgb(11, 65, 104);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h2 {
-  color: yellowgreen;
+h1 {
+  text-transform: uppercase;
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
