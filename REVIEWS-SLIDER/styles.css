@@ -17,9 +17,21 @@ h5 {
 .slide-left,
 .slide-right {
   color: rgb(38, 154, 212);
+  background: whitesmoke;
   font-weight: bold;
-  font-size: 30px;
-  padding: 5px;
+  font-size: 40px;
+  padding: 10px;
+  border: none;
+  transition: all 0.4s ease-out;
+}
+.slide-right:hover {
+  color: lightgray;
+  cursor: pointer;
+}
+
+.slide-left:hover {
+  color: lightgray;
+  cursor: pointer;
 }
 
 #btn {
@@ -30,7 +42,7 @@ h5 {
   font-size: 1rem;
   color: whitesmoke;
   border-radius: 20px;
-  margin: 5px 0;
+  margin-top: 10px;
   transition: all 0.4s ease-out;
 }
 #btn:hover {
@@ -42,7 +54,7 @@ h5 {
 img {
   height: 200px;
   width: 200px;
-  border-right: 7px solid rgb(38, 154, 212);
+  border-right: 10px solid rgb(38, 154, 212);
   border-radius: 60%;
 }
 main {
