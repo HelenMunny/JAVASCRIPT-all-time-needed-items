@@ -46,7 +46,6 @@ nav a {
 nav a:hover {
   border: 2px solid rgb(59, 32, 133);
   border-radius: 20px;
-  transition: 0.3s;
 }
 .nav-toggle {
   position: absolute;
@@ -63,9 +62,18 @@ nav a:hover {
     visibility: hidden;
   }
 }
-
-@media (min-width: 900px) {
-  .nav-toggle {
+@media (max-width: 899px) {
+  .nav-links {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
     visibility: hidden;
+  }
+  .show {
+    visibility: visible;
+  }
+  nav li {
+    line-height: 60px;
   }
 }
