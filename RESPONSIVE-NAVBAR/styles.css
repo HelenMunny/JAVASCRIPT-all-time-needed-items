@@ -8,7 +8,7 @@
   line-height: 80px;
   font-size: 1.5rem;
   color: black;
-  padding: 0 100px;
+  padding: 0 60px;
   font-weight: bold;
 }
 .helen {
@@ -28,9 +28,10 @@ nav {
 nav ul {
   float: right;
   margin-right: 40px;
+  display: flex;
 }
 nav li {
-  display: inline-block;
+  list-style-type: none;
   margin: 0 8px;
   line-height: 80px;
 }
@@ -46,4 +47,25 @@ nav a:hover {
   border: 2px solid rgb(59, 32, 133);
   border-radius: 20px;
   transition: 0.3s;
+}
+.nav-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 0.6rem;
+  background: transparent;
+  border: none;
+  margin-right: 40px;
+  cursor: pointer;
+  line-height: 80px;
+}
+@media (min-width: 900px) {
+  .nav-toggle {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-toggle {
+    visibility: hidden;
+  }
 }
