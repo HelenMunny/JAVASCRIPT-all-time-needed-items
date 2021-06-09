@@ -1,0 +1,87 @@
+body {
+  background: lightgrey;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h3 {
+  margin-bottom: 0;
+}
+h5 {
+  color: rgb(38, 154, 212);
+  margin-top: 0;
+  font-size: 1rem;
+}
+.slide-left,
+.slide-right {
+  color: rgb(38, 154, 212);
+  font-weight: bold;
+  font-size: 30px;
+  padding: 5px;
+}
+
+#btn {
+  background: rgb(38, 154, 212);
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: whitesmoke;
+  border-radius: 20px;
+  margin: 5px 0;
+  transition: all 0.4s ease-out;
+}
+#btn:hover {
+  background: lightgrey;
+  color: black;
+  transform: scale(0.95);
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  border-right: 7px solid rgb(38, 154, 212);
+  border-radius: 60%;
+}
+main {
+  min-height: 100vh;
+}
+.container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+}
+
+.reviews {
+  background: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 30px 5px grey;
+}
+
+.comma {
+  background: rgb(38, 154, 212);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: whitesmoke;
+  font-size: 50px;
+  text-align: center;
+}
+
+.quotation {
+  height: 30px;
+  width: 30px;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 70%;
+  }
+}
