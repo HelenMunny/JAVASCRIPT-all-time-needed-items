@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-logo {
+  line-height: 80px;
+  font-size: 1.5rem;
+  color: black;
+  padding: 0 100px;
+  font-weight: bold;
+}
+.helen {
+  font-size: 2.5rem;
+  color: rgb(59, 32, 133);
+}
+.fa-bars {
+  color: rgb(59, 32, 133);
+  font-size: 30px;
+}
+nav {
+  height: 80px;
+  width: 100%;
+  background: lightskyblue;
+  box-shadow: 5px 5px 20px gray;
+}
+nav ul {
+  float: right;
+  margin-right: 40px;
+}
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  padding: 6px 8px;
+}
+.current,
+nav a:hover {
+  border: 2px solid rgb(59, 32, 133);
+  border-radius: 20px;
+  transition: 0.3s;
+}
