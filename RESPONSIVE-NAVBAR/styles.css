@@ -73,6 +73,9 @@ nav a:hover {
   .show {
     visibility: visible;
   }
+  .expand {
+    height: auto;
+  }
   nav li {
     line-height: 60px;
   }

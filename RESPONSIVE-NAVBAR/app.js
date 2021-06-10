@@ -7,6 +7,9 @@ let nav = document.querySelector("#nav");
 
 let navExpand = false;
 navToggle.addEventListener('click', function () {
+
+// 1st alternative
+
  if (!navExpand) {
   navLinks.classList.add('show');
   nav.style.height = 'auto';
@@ -19,4 +22,10 @@ navToggle.addEventListener('click', function () {
   navToggle.innerHTML = '<i class="fa fa-bars" aria-hidden="true"></i>';
   navExpand = false;
  }
+
+
+
+ // 2nd alternative
+ // navLinks.classList.toggle('show');
+ // nav.classList.toggle('expand');
 });
