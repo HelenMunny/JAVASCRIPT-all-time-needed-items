@@ -3,6 +3,7 @@ body {
 }
 h1 {
   color: lightseagreen;
+  text-align: center;
 }
 h3 {
   color: lightseagreen;
@@ -33,10 +34,10 @@ h3 {
   background: rgba(147, 112, 216, 0.491);
   transition: all 0.3s ease-in;
 }
-.qsn-collapse {
+.hide-btn {
   display: none;
 }
-.qsn-ans {
+.hide-ans {
   display: none;
 }
 .question {
@@ -47,12 +48,12 @@ h3 {
   height: auto;
 }
 @media (max-width: 750px) {
-  .faq-center {
-    width: 75%;
+  .question {
+    width: 70vw;
   }
 }
 @media (min-width: 751px) {
-  .faq-center {
-    width: 60%;
+  .question {
+    width: 50vw;
   }
 }
