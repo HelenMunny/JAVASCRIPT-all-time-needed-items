@@ -27,13 +27,14 @@ questions.forEach(function (question) {
   expandBtn.classList.toggle('hide-btn');
   collapseBtn.classList.toggle('hide-btn');
   qsnAns.classList.toggle('hide-ans');
+
+  collapseBtn.addEventListener('click', function () {
+   expandBtn.classList.toggle('hide-btn');
+   collapseBtn.classList.toggle('hide-btn');
+   qsnAns.classList.toggle('hide-ans');
+  })
  })
 
- collapseBtn.addEventListener('click', function () {
-  expandBtn.classList.toggle('hide-btn');
-  collapseBtn.classList.toggle('hide-btn');
-  qsnAns.classList.toggle('hide-ans');
- })
 });
 
 
