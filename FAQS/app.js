@@ -27,15 +27,26 @@ questions.forEach(function (question) {
   expandBtn.classList.toggle('hide-btn');
   collapseBtn.classList.toggle('hide-btn');
   qsnAns.classList.toggle('hide-ans');
+ })
 
-  collapseBtn.addEventListener('click', function () {
-   expandBtn.classList.toggle('hide-btn');
-   collapseBtn.classList.toggle('hide-btn');
-   qsnAns.classList.toggle('hide-ans');
-  })
+ collapseBtn.addEventListener('click', function () {
+  expandBtn.classList.toggle('hide-btn');
+  collapseBtn.classList.toggle('hide-btn');
+  qsnAns.classList.toggle('hide-ans');
  })
 
 });
+
+// traversing the dom
+// const btns = document.querySelectorAll(".qsn-btn");
+
+// btns.forEach(function (btn) {
+//   btn.addEventListener("click", function (e) {
+//     const question = e.currentTarget.parentElement.parentElement;
+
+//     question.classList.toggle("show-text");
+//   });
+// });
 
 
 

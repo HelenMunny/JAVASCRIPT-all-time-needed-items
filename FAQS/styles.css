@@ -34,6 +34,12 @@ h3 {
   background: rgba(147, 112, 216, 0.491);
   transition: all 0.3s ease-in;
 }
+/* .qsn-collapse {
+  display: none;
+}
+.qsn-ans {
+  display: none;
+} */
 .hide-btn {
   display: none;
 }
