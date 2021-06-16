@@ -88,7 +88,42 @@ let kidsBtn = document.querySelector(".kids-btn");
 let allBtn = document.querySelector(".all-btn");
 
 window.addEventListener('DOMContentLoaded', function () {
- let displayItems = shoes.map(function (item) {
+ display(shoes);
+})
+
+allBtn.addEventListener('click', function () {
+ display(shoes);
+ })
+
+womenBtn.addEventListener('click', function () {
+ let displayWomen = shoes.filter(function (item) {
+  if (item.category == "women") {
+   return item;
+  }
+ })
+ display(displayWomen);
+});
+
+menBtn.addEventListener('click', function () {
+ let displayMen = shoes.filter(function (item) {
+  if (item.category == "men") {
+   return item;
+  }
+ })
+ display(displayMen);
+});
+
+kidsBtn.addEventListener('click', function () {
+ let displayKids = shoes.filter(function (item) {
+  if (item.category == "kids") {
+   return item;
+  }
+ })
+ display(displayKids);
+});
+
+function display(item) {
+ let displayItems = item.map(function (item) {
   return `<article class="menu-item">
   <img src=${item.img} alt=${item.title} class="menu-photo">
   <div class="item-info">
@@ -99,20 +134,5 @@ window.addEventListener('DOMContentLoaded', function () {
  });
  displayItems = displayItems.join("");
  itemsContainer.innerHTML = displayItems;
-})
+}
 
-
-
-// for (i = 0; i > shoes.length - 1; i++){
-//  let category = shoes[i].category;
-//  womenBtn.addEventListener('click', function () {
-//   if (category == "women") {
-//    alert("hi");
-//   }
-//  });
-
-// }
-
-// function shoeCategory(i) {
-//  let category = shoes[i].category
-// }
