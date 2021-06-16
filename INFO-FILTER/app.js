@@ -86,6 +86,7 @@ let womenBtn = document.querySelector(".women-btn");
 let menBtn = document.querySelector(".men-btn");
 let kidsBtn = document.querySelector(".kids-btn");
 let allBtn = document.querySelector(".all-btn");
+let btns = document.querySelectorAll(".filter-btn");
 
 window.addEventListener('DOMContentLoaded', function () {
  display(shoes);
@@ -135,4 +136,25 @@ function display(item) {
  displayItems = displayItems.join("");
  itemsContainer.innerHTML = displayItems;
 }
+
+
+// second and shortest option, READING DATASET PROPERTY
+
+
+// btns.forEach(function (btn) {
+//  btn.addEventListener('click', function (e) {
+//   let btnCategory = e.currentTarget.dataset.category;
+//   let itemCategory = shoes.filter(function (item) {
+//    if (item.category == btnCategory) {
+//     return item;
+//    }
+//   })
+//   if (btnCategory == "all") {
+//    display(shoes);
+//   } else {
+//    display(itemCategory);
+//   }
+//  })
+// })
+
 
