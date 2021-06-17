@@ -4,3 +4,5 @@ This repo includes all time needed simple javascript projects like responsive na
 >>>> MODAL: https://js-simple-modal.netlify.app/ <br>
 >>>> RESPONSIVE-NAVBAR: https://js-responsive-nav.netlify.app/ <br>
 >>>> REVIEWS SLIDER: https://js-reviews-slider.netlify.app/  <br>
+>>>> FAQS: <br>
+>>>> Filter project: <br>
