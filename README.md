@@ -6,3 +6,5 @@ This repo includes all time needed simple javascript projects like responsive na
 >>>> REVIEWS SLIDER: https://js-reviews-slider.netlify.app/  <br>
 >>>> FAQS: <br>
 >>>> Filter project: <br>
+>>>> Video control project: <br>
+>>>> Smooth scroll, sticky navbar: <br>
