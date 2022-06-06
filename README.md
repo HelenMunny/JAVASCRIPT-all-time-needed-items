@@ -8,3 +8,4 @@ This repo includes all time needed simple javascript projects like responsive na
 >>>> Filter project: <br>
 >>>> Video control project: <br>
 >>>> Smooth scroll, sticky navbar: <br>
+>>>> 100days of code
