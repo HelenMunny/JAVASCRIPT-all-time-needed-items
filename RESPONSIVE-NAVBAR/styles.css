@@ -3,16 +3,20 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+html {
+  scroll-behavior: smooth;
 }
 .nav-logo {
   line-height: 80px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: black;
   padding: 0 60px;
   font-weight: bold;
 }
 .helen {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: rgb(59, 32, 133);
 }
 .fa-bars {
@@ -25,9 +29,14 @@ nav {
   background: lightskyblue;
   box-shadow: 5px 5px 20px gray;
 }
+
+.fixed-nav {
+  position: fixed;
+  background: rgba(135, 206, 250, 0.654);
+}
 nav ul {
   float: right;
-  margin-right: 40px;
+  margin-right: 30px;
   display: flex;
 }
 nav li {
@@ -57,12 +66,12 @@ nav a:hover {
   cursor: pointer;
   line-height: 80px;
 }
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .nav-toggle {
     visibility: hidden;
   }
 }
-@media (max-width: 899px) {
+@media (max-width: 999px) {
   .nav-links {
     float: none;
     display: block;
@@ -70,13 +79,72 @@ nav a:hover {
     text-align: center;
     visibility: hidden;
   }
-  .show {
-    visibility: visible;
-  }
-  .expand {
-    height: auto;
-  }
   nav li {
     line-height: 60px;
+  }
+}
+.show {
+  visibility: visible;
+  z-index: 100;
+}
+.expand {
+  height: auto;
+}
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background-color: lightslategray;
+}
+section {
+  min-height: 70vh;
+}
+section {
+  background-color: lightskyblue;
+  display: grid;
+  place-items: center;
+}
+#projects,
+#additional {
+  background-color: lightslategrey;
+}
+.my-img {
+  height: 80%;
+  width: 70%;
+  border: 3px solid lightskyblue;
+  border-radius: 20px;
+  margin: auto;
+}
+.about-text {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
+}
+#footer {
+  background-color: black;
+  color: wheat;
+  height: 100px;
+  display: grid;
+  place-items: center;
+}
+.top-link {
+  color: wheat;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: yellowgreen;
+  padding: 2px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+@media (max-width: 700px) {
+  #about {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .about-text {
+    padding: 30px;
   }
 }

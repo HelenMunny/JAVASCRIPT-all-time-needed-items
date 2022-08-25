@@ -4,30 +4,68 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>responsive navbar</title>
- <!-- fontawesome -->
- <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+ <title>smooth scroll, sticky & responsive nav</title>
  <!-- css link -->
  <link rel="stylesheet" href="styles.css">
+ <!-- font awesome link -->
+ <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
- <nav id="nav">
-  <!-- nav label/heading/logo -->
-    <label class="nav-logo">Mahmuda <span class="helen">Helen</span></label>
-    <!-- nav links -->
-    <ul class="nav-links">
-     <li><a href="#" class="current">About Me</a></li>
-     <li><a href="#">Skills & Experience</a></li>
-     <li><a href="#">Projects</a></li>
-     <li><a href="#">Contact</a></li>
-    </ul>
-    <!-- toggle button -->
-    <button class="nav-toggle">
-     <i class="fa fa-bars" aria-hidden="true"></i>
-    </button>
- </nav>
+ <!-- smooth scroll project -->
+ <header>
+  <!-- nav -->
+  <nav id="nav">
+   <!-- nav label/heading/logo -->
+     <label class="nav-logo">Mahmuda <span class="helen">Helen</span></label>
+     <!-- nav links -->
+     <ul class="nav-links">
+      <li><a href="#about" class="link">About Me</a></li>
+      <li><a href="#skills" class="link">Skills & Experience</a></li>
+      <li><a href="#projects" class="link">Projects</a></li>
+      <li><a href="#contacts" class="link">Contact</a></li>
+      <li><a href="#additional" class="link">Additional</a></li>
+     </ul>
+     <!-- toggle button -->
+     <button class="nav-toggle">
+      <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+     </button>
+  </nav>
+ </header>
 
- <!-- javascript link -->
+ <main>
+    <!-- other pages -->
+    <section id="about">
+    <img src="images/person-1.jpg" alt="my-img" class="my-img">
+    <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque iste mollitia ipsum commodi, molestias nam atque quisquam ipsam ratione officia natus maxime dolores magni vitae quidem repellat delectus nulla earum neque cupiditate alias aut autem quos. Reiciendis fugiat, veritatis, maiores animi hic excepturi soluta facere, sunt exercitationem repudiandae velit!</p>
+    </section>
+
+    <section id="skills">
+     <h1>SKILLS</h1>
+     <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque iste mollitia ipsum commodi, molestias nam atque quisquam ipsam ratione officia natus maxime dolores magni vitae quidem repellat delectus nulla earum neque cupiditate alias aut autem quos. Reiciendis fugiat, veritatis, maiores animi hic excepturi soluta facere, sunt exercitationem repudiandae velit!</p>
+     </section>
+
+     <section id="projects">
+      <h1>PROJECTS</h1>
+      <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque iste mollitia ipsum commodi, molestias nam atque quisquam ipsam ratione officia natus maxime dolores magni vitae quidem repellat delectus nulla earum neque cupiditate alias aut autem quos. Reiciendis fugiat, veritatis, maiores animi hic excepturi soluta facere, sunt exercitationem repudiandae velit!</p>
+      </section>
+
+      <section id="contacts">
+       <h1>CONTACTS</h1>
+       <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque iste mollitia ipsum commodi, molestias nam atque quisquam ipsam ratione officia natus maxime dolores magni vitae quidem repellat delectus nulla earum neque cupiditate alias aut autem quos. Reiciendis fugiat, veritatis, maiores animi hic excepturi soluta facere, sunt exercitationem repudiandae velit!</p>
+       </section>
+
+       <section id="additional">
+        <h1>Additional</h1>
+        <p class="additional-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt itaque iste mollitia ipsum commodi, molestias nam atque quisquam ipsam ratione officia natus maxime dolores magni vitae quidem repellat delectus nulla earum neque cupiditate alias aut autem quos. Reiciendis fugiat, veritatis, maiores animi hic excepturi soluta facere, sunt exercitationem repudiandae velit!</p>
+        </section>
+ </main>
+
+ <footer id="footer">
+ ALL RIGHTS RESERVED @MAHMUDA HELEN, <span class="date">June, 2020</span>
+ </footer>
+ <!-- BACK TO TOP -->
+ <a href="#about" class="scroll-link top-link"><i class="fa fa-arrow-up fa-2x"></i></a>
+ <!-- js link -->
  <script src="app.js"></script>
 </body>
 </html>
