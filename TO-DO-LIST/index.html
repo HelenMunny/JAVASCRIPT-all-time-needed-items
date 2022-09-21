@@ -14,31 +14,50 @@
  
  <main>
   <section class="taskEntry">
-   <h1>My Tasks</h1>
-   <input type="text" name="newTask" id="newTask" placeholder="taskTitle">
-   <button class="addTasks" title="Add new task">Add Tasks</button>
+   <h1>to-do list</h1>
+   <input type="text" name="newTask" id="newTask" placeholder="task Title">
+   <button class="addTasks" title="Add new task">Add Task</button>
   </section>
   
   <article class="container">
    <section class="newTasks">
     <h2>New Tasks <span><i class="fas fa-list-ul"></i></i></span></h2>
     <ul id="new">
-     <li>30mins workout 
-      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
+     <li>30 mins workout 
+      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+
       <span class="toCompleted"><i class="far fa-check-circle" title="mark as completed"></i></span>
-     <span class="toDelete"><i class="far fa-trash-alt" title="delete forever"></i></span></li>
+
+      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
+      
+     </li>
     </ul>
    </section>
    <section class="ongoingTasks">
     <h2>Ongoing Tasks <span><i class="far fa-clock"></i></span></h2>
     <ul id="ongoing">
-     <li>Making a to-do list</li>
+     <li>Making a to-do list
+
+      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+      
+      <span class="toCompleted"><i class="far fa-check-circle" title="mark as completed"></i></span>
+
+      <span class="toNew"><i class="fas fa-list-ul" title="mark as completed"></i></span> 
+
+     </li>
     </ul>
    </section>
    <section class="completedTasks">
     <h2>Completed Tasks <span><i class="far fa-check-circle"></i></span></h2>
     <ul id="completed">
-     <li>1 hour coding</li>
+     <li>1 hour coding
+      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+      
+      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
+
+      <span class="toNew"><i class="fas fa-list-ul" title="mark as completed"></i></span> 
+
+     </li>
     </ul>
    </section>
   </article>
