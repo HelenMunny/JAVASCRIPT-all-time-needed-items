@@ -3,3 +3,49 @@ body{
  border: 0;
  box-sizing: border-box;
 }
+
+.taskEntry{
+ position: absolute;
+ left: 50%;
+ top: 5%;
+ transform: translate(-50%);
+}
+
+.container{
+ margin-top: 25vh;
+ display: grid;
+ justify-content: center;
+ align-content: center;
+
+ gap: 1.5rem;
+ grid-auto-flow: column;
+ /* flex-wrap: wrap;
+ justify-content: center;
+ align-items: center; */
+}
+
+/* .container section{
+ margin: 1rem;
+} */
+h2 span{
+ margin-left: 15px;
+}
+ul{
+ background-color: aqua;
+ min-height: 20vh;
+ min-width: 25vw;
+ padding: 10px;
+}
+ /* li span{
+  margin-left: 1rem;
+} */
+ ul span.toCompleted:hover{
+ color: red;
+ background: green;
+ padding: 2px;
+ border-radius: 20%;
+}
+ul span {
+float: right;
+margin: 2px;
+}

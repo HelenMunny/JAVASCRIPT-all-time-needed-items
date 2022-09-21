@@ -6,13 +6,49 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <!-- css link -->
  <link rel="stylesheet" href="styles.css">
+ <!-- fontawesome -->
+ <!-- <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.min.css"> -->
  <title>js to-do list</title>
 </head>
 <body>
  
+ <main>
+  <section class="taskEntry">
+   <h1>My Tasks</h1>
+   <input type="text" name="newTask" id="newTask" placeholder="taskTitle">
+   <button class="addTasks" title="Add new task">Add Tasks</button>
+  </section>
+  
+  <article class="container">
+   <section class="newTasks">
+    <h2>New Tasks <span><i class="fas fa-list-ul"></i></i></span></h2>
+    <ul id="new">
+     <li>30mins workout 
+      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
+      <span class="toCompleted"><i class="far fa-check-circle" title="mark as completed"></i></span>
+     <span class="toDelete"><i class="far fa-trash-alt" title="delete forever"></i></span></li>
+    </ul>
+   </section>
+   <section class="ongoingTasks">
+    <h2>Ongoing Tasks <span><i class="far fa-clock"></i></span></h2>
+    <ul id="ongoing">
+     <li>Making a to-do list</li>
+    </ul>
+   </section>
+   <section class="completedTasks">
+    <h2>Completed Tasks <span><i class="far fa-check-circle"></i></span></h2>
+    <ul id="completed">
+     <li>1 hour coding</li>
+    </ul>
+   </section>
+  </article>
+
+ </main>
 
 
 
+<!-- fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
  <!-- js link -->
  <script src="app.js"></script>
 </body>
