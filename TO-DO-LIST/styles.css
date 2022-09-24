@@ -50,6 +50,7 @@ h1,h2,h3,h4{
  background-color: rgb(0, 0, 255);
  transform: scale(1.1);
  transition: 0.1s all linear;
+ cursor: pointer;
 }
 .container{
  margin-top: 25vh;
@@ -80,6 +81,7 @@ ul{
 }
 ul li{
  list-style-type:none;
+ margin: 6px;
 }
  /* li span{
   margin-left: 1rem;
@@ -89,6 +91,7 @@ ul span {
 float: right;
 margin: 0 3px;
 }
+
 
 /* new task */
 

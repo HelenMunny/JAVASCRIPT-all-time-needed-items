@@ -15,8 +15,21 @@
  <main>
   <section class="taskEntry">
    <h1>to-do list</h1>
-   <input type="text" name="newTask" id="newTask" placeholder="task Title">
-   <button class="addTasks" title="Add new task">Add Task</button>
+   
+   <form action="">
+    <input 
+    type="text" 
+    name="newTask"
+    id="newTask" 
+    placeholder="task Title">
+
+    <input type="submit"
+    class="addTasks"
+    title="Add new task"
+    value="Add Task">
+
+   </form>
+
   </section>
   
   <article class="container">
@@ -30,6 +43,26 @@
 
       <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
       
+     </li>
+
+     <li>Play with the toddler 
+      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+
+      <span class="toCompleted"><i class="far fa-check-circle" title="mark as completed"></i></span>
+
+      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
+     </li>
+
+
+
+
+     
+     <li>Clean the house 
+      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+
+      <span class="toCompleted"><i class="far fa-check-circle" title="mark as completed"></i></span>
+
+      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
      </li>
     </ul>
    </section>
@@ -56,8 +89,9 @@
       <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
 
       <span class="toNew"><i class="fas fa-list-ul" title="mark as completed"></i></span> 
-
      </li>
+
+     
     </ul>
    </section>
   </article>
