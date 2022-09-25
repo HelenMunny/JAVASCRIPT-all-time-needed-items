@@ -8,4 +8,4 @@ This repo includes all time needed simple javascript projects like responsive na
 >>>> Filter project: <br>
 >>>> Video controller: https://video-controller.netlify.app/ <br>
 >>>> Smooth scroll, sticky navbar: https://responsive-nav-smooth-scroll.netlify.app/ <br>
->>>> To-do list: 
+>>>> To-do list: unfinished..... js codes not working 
