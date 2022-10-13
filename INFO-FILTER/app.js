@@ -123,8 +123,8 @@ kidsBtn.addEventListener('click', function () {
  display(displayKids);
 });
 
-function display(item) {
- let displayItems = item.map(function (item) {
+function display(items) {
+ let displayItems = items.map(function (item) {
   return `<article class="menu-item">
   <img src=${item.img} alt=${item.title} class="menu-photo">
   <div class="item-info">

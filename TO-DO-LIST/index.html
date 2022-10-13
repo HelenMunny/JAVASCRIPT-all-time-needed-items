@@ -15,8 +15,9 @@
  <main>
   <section class="taskEntry">
    <h1>to-do list</h1>
-   
-   <form action="">
+   <p class="alert"></p>
+
+   <form action="" class="toDoForm">
     <input 
     type="text" 
     name="newTask"
@@ -35,22 +36,22 @@
   <article class="container">
    <section class="newTasks">
     <h2>New Tasks <span><i class="fas fa-list-ul"></i></i></span></h2>
-    <ul id="new">
+    <ul class="uList new">
      <li>30 mins workout 
-      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+      <span class="toDelete move-btn"><i class="far fa-trash-alt" title="delete task"></i></span>
 
-      <span class="toCompleted"><i class="far fa-check-circle" title="mark as completed"></i></span>
+      <span class="toCompleted move-btn"><i class="far fa-check-circle" title="mark as completed"></i></span>
 
-      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
+      <span class="toOngoing move-btn"><i class="far fa-clock" title="mark as ongoing"></i></span> 
       
      </li>
 
      <li>Play with the toddler 
-      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+      <span class="toDelete move-btn"><i class="far fa-trash-alt" title="delete task"></i></span>
 
-      <span class="toCompleted"><i class="far fa-check-circle" title="mark as completed"></i></span>
+      <span class="toCompleted move-btn"><i class="far fa-check-circle" title="mark as completed"></i></span>
 
-      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
+      <span class="toOngoing move-btn"><i class="far fa-clock" title="mark as ongoing"></i></span> 
      </li>
 
 
@@ -58,37 +59,37 @@
 
      
      <li>Clean the house 
-      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+      <span class="toDelete move-btn"><i class="far fa-trash-alt" title="delete task"></i></span>
 
-      <span class="toCompleted"><i class="far fa-check-circle" title="mark as completed"></i></span>
+      <span class="toCompleted move-btn"><i class="far fa-check-circle" title="mark as completed"></i></span>
 
-      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
+      <span class="toOngoing move-btn"><i class="far fa-clock" title="mark as ongoing"></i></span> 
      </li>
     </ul>
    </section>
    <section class="ongoingTasks">
     <h2>Ongoing Tasks <span><i class="far fa-clock"></i></span></h2>
-    <ul id="ongoing">
+    <ul class="uList ongoing">
      <li>Making a to-do list
 
-      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+      <span class="toDelete move-btn"><i class="far fa-trash-alt" title="delete task"></i></span>
       
-      <span class="toCompleted"><i class="far fa-check-circle" title="mark as completed"></i></span>
+      <span class="toCompleted move-btn"><i class="far fa-check-circle" title="mark as completed"></i></span>
 
-      <span class="toNew"><i class="fas fa-list-ul" title="mark as completed"></i></span> 
+      <span class="toNew move-btn"><i class="fas fa-list-ul" title="mark as completed"></i></span> 
 
      </li>
     </ul>
    </section>
    <section class="completedTasks">
     <h2>Completed Tasks <span><i class="far fa-check-circle"></i></span></h2>
-    <ul id="completed">
+    <ul class ="uList completed">
      <li>1 hour coding
-      <span class="toDelete"><i class="far fa-trash-alt" title="delete task"></i></span>
+      <span class="toDelete move-btn"><i class="far fa-trash-alt" title="delete task"></i></span>
       
-      <span class="toOngoing"><i class="far fa-clock" title="mark as ongoing"></i></span> 
+      <span class="toOngoing move-btn"><i class="far fa-clock" title="mark as ongoing"></i></span> 
 
-      <span class="toNew"><i class="fas fa-list-ul" title="mark as completed"></i></span> 
+      <span class="toNew move-btn"><i class="fas fa-list-ul" title="mark as completed"></i></span> 
      </li>
 
      

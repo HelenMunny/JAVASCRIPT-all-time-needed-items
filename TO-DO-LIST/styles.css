@@ -54,11 +54,13 @@ h1,h2,h3,h4{
 }
 .container{
  margin-top: 25vh;
+ margin-left: 1rem;
+ margin-right: 1rem;
  display: grid;
  justify-content: center;
  align-content: center;
 
- gap: 1.5rem;
+ gap: 1rem;
  grid-auto-flow: column;
  /* flex-wrap: wrap;
  justify-content: center;
@@ -66,7 +68,7 @@ h1,h2,h3,h4{
 }
 
 /* .container section{
- margin: 1rem;
+ max-width: 30%;
 } */
 h2 span{
  margin-left: 15px;
@@ -74,14 +76,14 @@ h2 span{
 ul{
  /* background-color: aqua; */
  min-height: 20vh;
- min-width: 25vw;
+ min-width: 27vw;
  padding: 10px;
  color: whitesmoke;
- font-weight: bold;
+ /* font-weight: bold; */
 }
 ul li{
  list-style-type:none;
- margin: 6px;
+ margin: 6px 3px;
 }
  /* li span{
   margin-left: 1rem;
@@ -137,3 +139,14 @@ ul span.toOngoing:hover{
  background-color: #E3C565;
 }
 
+
+
+@media (max-width:1024px){
+ .container{
+  grid-auto-flow: row;
+ }
+.container section{
+ min-width: 60vw;
+}
+
+}
