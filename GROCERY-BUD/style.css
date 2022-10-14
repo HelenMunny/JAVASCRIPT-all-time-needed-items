@@ -45,3 +45,6 @@ button{
  margin: 0 1rem;
  border-radius: 20px;
 }
+.show{
+ visibility: visible;
+}
