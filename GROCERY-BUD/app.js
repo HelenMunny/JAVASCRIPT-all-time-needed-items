@@ -28,7 +28,6 @@ form.addEventListener("submit", function (e) {
   const attr = document.createAttribute('data-id');
   attr.value = id;
 
-
   element.setAttributeNode(attr);
   element.innerHTML = ` <p class="itemName">${value}</p>
   <div class="btnContainer">
@@ -38,13 +37,10 @@ form.addEventListener("submit", function (e) {
   
   // append child
   list.appendChild(element);
-
   // display alert
   displayAlert('Item successfully added to the list!', 'green')
-
   // show container
   groceryContainer.classList.add('show');
-
   // add to local storage
   addToLocalStorage(id, value);
   // set back to default
@@ -58,11 +54,28 @@ form.addEventListener("submit", function (e) {
  }
 })
 
+// clear items
+clearBtn.addEventListener('click', clearItems)
+
+function clearItems() {
+ const items = document.querySelectorAll('.groceryItem');
+
+ if (items.length > 0) {
+  items.forEach(function (item) {
+   list.removeChild(item);
+   setBackToDefault();
+  });
+
+  groceryContainer.classList.remove('show');
+  displayAlert('Empty List!', 'red');
+  // localStorage.removeItem('list');
+ }
+}
+
 // display alert
 function displayAlert(text, color) {
  alert.innerHTML = text;
  alert.style.color = color;
- 
  // remove alert after sometime
  setTimeout(function () {
   alert.innerHTML = '';
@@ -75,7 +88,11 @@ function addToLocalStorage(id, value) {
  console.log('added to local storage');
 }
 
+
 // set back to default
 function setBackToDefault() {
- console.log('set back to default');
+ input.value = "";
+ edit = false;
+ editID = "";
+ submitBtn.textContent = 'submit';
 }
