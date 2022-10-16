@@ -34,6 +34,14 @@ form.addEventListener("submit", function (e) {
    <button type="button" class="editBtn"><i class="fas fa-edit"></i></button>
    <button type="button" class="deleteBtn"><i class="fas fa-trash"></i></button>
   </div> `;
+
+  // edit and delete //here because, element has been added dynamically. it's not present in the html. so we can edit or delete an item from the list only when we have access to them. or only when the item has been added to the list.
+  const deleteBtn = element.querySelector('.deleteBtn');
+  const editBtn = element.querySelector('.editBtn');
+
+  editBtn.addEventListener('click', editItem);
+  deleteBtn.addEventListener('click', deleteItem);
+
   
   // append child
   list.appendChild(element);
@@ -51,6 +59,7 @@ form.addEventListener("submit", function (e) {
  }
  else if (!value){
   displayAlert('Please Enter an item!', 'red');
+  setBackToDefault();
  }
 })
 
@@ -71,6 +80,8 @@ function clearItems() {
   // localStorage.removeItem('list');
  }
 }
+
+// functions.......................
 
 // display alert
 function displayAlert(text, color) {
@@ -95,4 +106,31 @@ function setBackToDefault() {
  edit = false;
  editID = "";
  submitBtn.textContent = 'submit';
+}
+
+// edit & delete Item
+function editItem(e){
+ const currItem = e.currentTarget.parentElement.parentElement;
+ const editElement = e.currentTarget.parentElement.previousElementSibling;
+ input.value = editElement.innerHTML;
+ submitBtn.textContent = 'Edit';
+};
+function deleteItem(e){
+ const items = document.querySelectorAll('.groceryItem');
+ const currItem = e.currentTarget.parentElement.parentElement;
+ const id = currItem.dataset.id;
+ list.removeChild(currItem);
+ setBackToDefault();
+ displayAlert('Item removed', 'red');
+ if (list.children.length === 0) {
+  groceryContainer.classList.remove('show');
+ }
+
+ // remove from local storage
+ removeFromLocalStorage(id);
+};
+
+// remove from local storage
+function removeFromLocalStorage(id) {
+ console.log('item removed from local storage');
 }
