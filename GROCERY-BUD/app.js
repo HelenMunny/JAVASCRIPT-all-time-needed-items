@@ -55,7 +55,12 @@ form.addEventListener("submit", function (e) {
   setBackToDefault();
   }
  else if (value && edit) {
-  console.log('editing the item');
+  editElement.innerHTML = value;
+  displayAlert('Item Edited!', 'green');
+
+  // edit local storage
+  editLocalStorage(editID, value);
+  setBackToDefault();
  }
  else if (!value){
   displayAlert('Please Enter an item!', 'red');
@@ -77,7 +82,7 @@ function clearItems() {
 
   groceryContainer.classList.remove('show');
   displayAlert('Empty List!', 'red');
-  // localStorage.removeItem('list');
+  localStorage.removeItem('list');
  }
 }
 
@@ -94,10 +99,6 @@ function displayAlert(text, color) {
 }
 
 
-// add to local storage
-function addToLocalStorage(id, value) {
- console.log('added to local storage');
-}
 
 
 // set back to default
@@ -111,9 +112,11 @@ function setBackToDefault() {
 // edit & delete Item
 function editItem(e){
  const currItem = e.currentTarget.parentElement.parentElement;
- const editElement = e.currentTarget.parentElement.previousElementSibling;
+ editElement = e.currentTarget.parentElement.previousElementSibling;
  input.value = editElement.innerHTML;
  submitBtn.textContent = 'Edit';
+ edit = true;
+ editID = currItem.dataset.id;
 };
 function deleteItem(e){
  const items = document.querySelectorAll('.groceryItem');
@@ -130,7 +133,22 @@ function deleteItem(e){
  removeFromLocalStorage(id);
 };
 
+
+// LOCAL STORAGE...........................
+
+// add to local storage
+function addToLocalStorage(id, value) {
+ const grocery = {
+  id: id,
+  value:value
+}
+}
 // remove from local storage
 function removeFromLocalStorage(id) {
  console.log('item removed from local storage');
+}
+
+// edit local storage
+function editLocalStorage(id, value) {
+ 
 }
