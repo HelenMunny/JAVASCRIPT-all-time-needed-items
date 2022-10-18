@@ -1,5 +1,4 @@
 
-
 // select items
 const alert = document.querySelector(".alert");
 const form = document.querySelector(".groceryForm");
@@ -139,16 +138,35 @@ function deleteItem(e){
 // add to local storage
 function addToLocalStorage(id, value) {
  const grocery = {
-  id: id,
-  value:value
-}
+  id: id, value: value
+ };
+ let items = getLocalStorage();
+ console.log(items);
+ items.push(grocery);
+ 
+ localStorage.setItem('list', JSON.stringify(items));
+
 }
 // remove from local storage
 function removeFromLocalStorage(id) {
- console.log('item removed from local storage');
+ let items = getLocalStorage(); 
+
+ items = items.filter(function (item) {
+  if (item.id !== id) {
+   return item;
+  }
+ })
+ localStorage.setItem('list', JSON.stringify(items));
 }
 
 // edit local storage
 function editLocalStorage(id, value) {
  
+}
+
+
+function getLocalStorage() {
+ return localStorage.getItem('list')
+ ? JSON.parse(localStorage.getItem('list'))
+ : [];
 }
