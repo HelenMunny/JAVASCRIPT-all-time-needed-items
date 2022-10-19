@@ -1,3 +1,6 @@
+// load items from local storage
+window.addEventListener('DOMContentLoaded', setupItems);
+
 
 // select items
 const alert = document.querySelector(".alert");
@@ -21,29 +24,8 @@ form.addEventListener("submit", function (e) {
  const id = new Date().getTime().toString();
 
  if (value && !edit) {
-  const element = document.createElement('article');
-  element.classList.add('groceryItem');
-  // add id dynamically
-  const attr = document.createAttribute('data-id');
-  attr.value = id;
-
-  element.setAttributeNode(attr);
-  element.innerHTML = ` <p class="itemName">${value}</p>
-  <div class="btnContainer">
-   <button type="button" class="editBtn"><i class="fas fa-edit"></i></button>
-   <button type="button" class="deleteBtn"><i class="fas fa-trash"></i></button>
-  </div> `;
-
-  // edit and delete //here because, element has been added dynamically. it's not present in the html. so we can edit or delete an item from the list only when we have access to them. or only when the item has been added to the list.
-  const deleteBtn = element.querySelector('.deleteBtn');
-  const editBtn = element.querySelector('.editBtn');
-
-  editBtn.addEventListener('click', editItem);
-  deleteBtn.addEventListener('click', deleteItem);
-
   
-  // append child
-  list.appendChild(element);
+  createListItem(id, value);
   // display alert
   displayAlert('Item successfully added to the list!', 'green')
   // show container
@@ -141,7 +123,6 @@ function addToLocalStorage(id, value) {
   id: id, value: value
  };
  let items = getLocalStorage();
- console.log(items);
  items.push(grocery);
  
  localStorage.setItem('list', JSON.stringify(items));
@@ -161,7 +142,14 @@ function removeFromLocalStorage(id) {
 
 // edit local storage
 function editLocalStorage(id, value) {
- 
+ let items = getLocalStorage();
+ items = items.map(function (item) {
+  if (item.id === id) {
+   item.value = value;
+  } 
+  return item;
+ })
+ localStorage.setItem('list', JSON.stringify(items));
 }
 
 
@@ -169,4 +157,39 @@ function getLocalStorage() {
  return localStorage.getItem('list')
  ? JSON.parse(localStorage.getItem('list'))
  : [];
+}
+
+// setup items from local storage
+
+function setupItems() {
+ let items = getLocalStorage();
+ if (items.length > 0) {
+  items.forEach(function (item) {
+   createListItem(item.id, item.value);
+  })
+  groceryContainer.classList.add('show');
+ }
+}
+
+function createListItem(id, value) {
+ const element = document.createElement('article');
+  element.classList.add('groceryItem');
+
+  const attr = document.createAttribute('data-id');
+  attr.value = id;
+
+  element.setAttributeNode(attr);
+  element.innerHTML = ` <p class="itemName">${value}</p>
+  <div class="btnContainer">
+   <button type="button" class="editBtn"><i class="fas fa-edit"></i></button>
+   <button type="button" class="deleteBtn"><i class="fas fa-trash"></i></button>
+  </div> `;
+
+  const deleteBtn = element.querySelector('.deleteBtn');
+  const editBtn = element.querySelector('.editBtn');
+
+  editBtn.addEventListener('click', editItem);
+  deleteBtn.addEventListener('click', deleteItem);
+
+ list.appendChild(element);
 }
