@@ -1,3 +1,4 @@
+
 // load items from local storage
 window.addEventListener('DOMContentLoaded', setupItems);
 
