@@ -103,6 +103,7 @@ function editItem(e){
 function deleteItem(e){
  const items = document.querySelectorAll('.groceryItem');
  const currItem = e.currentTarget.parentElement.parentElement;
+ console.log(currItem);
  const id = currItem.dataset.id;
  list.removeChild(currItem);
  setBackToDefault();
@@ -132,11 +133,13 @@ function addToLocalStorage(id, value) {
 // remove from local storage
 function removeFromLocalStorage(id) {
  let items = getLocalStorage(); 
-
+ 
+// filter method will be used here because filter method returns item that passes the condition. but filter method does not  change the original array
  items = items.filter(function (item) {
   if (item.id !== id) {
    return item;
   }
+  
  })
  localStorage.setItem('list', JSON.stringify(items));
 }
