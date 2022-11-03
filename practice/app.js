@@ -1,11 +1,15 @@
 
-// constructor function
-// function Person(firstName, lastName) {
-//  this.prothomNaam = firstName;
-//  this.seshNaam = lastName;
-//  this.fullName = function () {
-//   console.log(`My name is ${this.prothomNaam} ${this.seshNaam} and I love react`);
-//  }
-// }
-// const john = new Person('John', 'Smilga');
-// john.fullName();
+
+function Account(name, initialBalance) {
+ this.name = name;
+ this.balance = initialBalance;
+ this.deposit = function (amount) {
+  this.balance += amount;
+  console.log(`hello ${this.name}, your balance is ${this.balance}`);
+  }
+}
+
+const john = new Account('John k.', 200)
+Account.prototype.bank = 'Bank of America';
+
+console.log(john.bank);
