@@ -1,80 +1,14 @@
-// Prototypical inheritance model
-// traditional method
-// function Account(name, initialBalance) {
-//  this.name = name;
-//  this.balance = initialBalance;
-// }
+// IIFE
 
-// const john = new Account('John k.', 200)
-// Account.prototype.bank = 'Bank of America';
-// Account.prototype.deposit = function (amount) {
-//  this.balance += amount;
-//  console.log(`hello ${this.name}, your balance is ${this.balance}`);
-//  }
-// console.log(john.bank);
-// john.deposit(100);
-
-
-// ES6 classes. Syntactic sugar for prototypal inheritance
-
-class Account {
- constructor(name,initialBalance) {
-  this.name = name;
-   this.balance = initialBalance;
- }
- deposit(amount) {
-  this.balance += amount;
- console.log(`hello ${this.name}, your balance is ${this.balance}`);
- }
-
- // if to add proto
- bank = 'Chase';
+const num1 = 10;
+const num2 = 20;
+function add() {
+ console.log(`the result is ${num1+num2}`)
 }
+add();
 
-const john = new Account('john',0);
-john.deposit(200);
-console.log(john.bank);
+(function (num3,num4) {
+ console.log(`the result is ${num3+num4}`)
+})(10, 20)
 
-// call, apply, bind
-
-const johny = {
- name: 'johny',
- age: 28,
-}
-const susan = {
- name: 'susan',
- age: 27,
-}
-
-function greet(city, state) {
- console.log(`Hello everyone, Im ${this.name} and Im ${this.age} years old. I live in ${city} , ${state}`);
-}
-
-// call (runs instantly, arguments - list of items)
- 
-greet.call(johny, 'Little rock', 'AR');
-
-// apply (runs instantly, arguments - array of items)
-greet.apply(susan, ['Pine bluff', 'AR']);
-
-// bind (assign, use later, argyments - list of items)
-const johnyGreet = greet.bind(johny, 'Faiteville', 'AR');
-johnyGreet();
-
-const counter = {
- count: 0,
- increment() {
-  this.count++;
-  console.log(this.count);
- }
-}
-
-let btn = document.querySelector('.btn');
-
-
-const increment = counter.increment.bind(counter);
-
-btn.addEventListener('click', increment);
-
-// remove event listener
-btn.removeEventListener('click', increment);
+// we cannot access num3 and num4. this is IIFE. by this way variables are protected inside a function and global space does not get polluted
