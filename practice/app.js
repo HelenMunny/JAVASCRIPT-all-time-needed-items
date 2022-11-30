@@ -12,3 +12,13 @@ add();
 })(10, 20)
 
 // we cannot access num3 and num4. this is IIFE. by this way variables are protected inside a function and global space does not get polluted
+
+var total = 1000;
+var test = true;
+if (test) {
+ var total = "oranges";
+ var value = "value";
+ console.log(`${total} and ${value}`)
+}
+
+console.log(`${total} and ${value}`)
