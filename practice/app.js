@@ -22,3 +22,22 @@ if (test) {
 }
 
 console.log(`${total} and ${value}`)
+
+// tagged template literals
+const author = "Luther Mark";
+const statement = "Life is a battle";
+const negative = "not";
+const boolean = "true";
+
+const quote = color `here is the statement : "${statement}", by ${author} and it could ${negative} be more ${boolean}`;
+console.log(quote);
+
+let result = document.querySelector("#result");
+result.innerHTML = quote;
+
+function color(text,...vars) {
+ const finalText = text.map(function (item, index) {
+  return `${item} <strong class="blue"> ${vars[index]||""} </strong>`
+ })
+ return finalText.join("");
+}
