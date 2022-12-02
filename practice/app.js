@@ -41,3 +41,12 @@ function color(text,...vars) {
  })
  return finalText.join("");
 }
+
+const bob = {
+ firstName: "bob",
+ lastName: "martin",
+ sayName: function () {
+  console.log(this)    //here this will points to bob object
+  setTimeout(() => { console.log(`hello my name is ${this.firstName} ${this.lastName}`) }, 2000);     //here, this will point to bob object. Because function setTimeout is surrounded by sayname/bob object. 
+ }
+}
