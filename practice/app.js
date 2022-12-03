@@ -50,3 +50,20 @@ const bob = {
   setTimeout(() => { console.log(`hello my name is ${this.firstName} ${this.lastName}`) }, 2000);     //here, this will point to bob object. Because function setTimeout is surrounded by sayname/bob object. 
  }
 }
+
+
+const john = "john";
+const sayHello = (person = "susan") => console.log(`hello ${person}`);
+
+sayHello();
+
+const fruits = ['orange', 'banana', 'avocado', 'apple', 'lemon']
+// array destructuring
+const [orange, , avocado, , lemon] = fruits;
+console.log([orange, avocado, lemon])
+
+// swapping the variables
+let first = 'orange';
+let second = 'banana';
+[second, first] = [first, second];
+console.log(first, second);
