@@ -67,3 +67,16 @@ let first = 'orange';
 let second = 'banana';
 [second, first] = [first, second];
 console.log(first, second);
+
+// object destructuring
+const helen = {
+ name: 'Helen',
+ age: 27,
+ profession: 'umemployed',
+ dream: 'to be an web developer'
+}
+const { name, profession } = helen;
+console.log({ name, profession })
+//for object destructuring, at the time of destructure, the property names have to match with the object's property names. and for skipping a property, we dont need to put comas or anything.
+
+
