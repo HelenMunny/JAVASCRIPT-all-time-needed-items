@@ -20,7 +20,6 @@ const newEntries = entries.map(entry => {
 // set objects
 const unique = new Set();
 const third = 'third';
-
 unique.add('first');
 unique.add('second');
 unique.add(third);
