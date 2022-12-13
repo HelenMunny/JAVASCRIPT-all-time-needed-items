@@ -5,15 +5,15 @@ const people = [
  { name: 'Tony', job: 'Designer' },
  {name:'Monika', job:'Manager'}
 ]
-const cont = document.querySelector('.conatiner');
+const container = document.querySelector('.container');
 const btn = document.querySelector('.btn');
 
 const showPeople = () => {
- const newPeople= people.map((person) => {
-  const {name,job} = person;
-  return `<p> ${name}, <strong> ${job} </strong> </p>`;
+ const newPeople = people.map((person) => {
+  const { name, job } = person;
+  return `<p>${name}, <strong> ${job} </strong> </p>`
  }).join('');
- cont.textContent = 'Hello';
+ container.innerHTML = newPeople;
 };
 
 btn.addEventListener('click', () => {
