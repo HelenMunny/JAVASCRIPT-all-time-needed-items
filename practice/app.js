@@ -1,13 +1,4 @@
-
-
-const people = [
- { name: 'Helen', job: 'Developer' },
- { name: 'Tony', job: 'Designer' },
- {name:'Monika', job:'Manager'}
-]
-const container = document.querySelector('.container');
-const btn = document.querySelector('.btn');
-
+import {people,container,btn} from './utilities/utils.js'
 const showPeople = () => {
  const newPeople = people.map((person) => {
   const { name, job } = person;
