@@ -5,19 +5,21 @@ const btn = document.querySelector('.btn');
 const container = document.querySelector('.img-container');
 const url = "https://source.unsplash.com/random";
 
-btn.addEventListener('click', () => {
- loadImage(url)
-  .then((img) => { container.appendChild(img) })
-  .catch((err) => {
-   console.log(err);
-  })
- 
- changeColor(red, 'red', 1000)
-  .then(() => { changeColor(green, 'green', 1000) })
-  .then(() => { changeColor(blue, 'blue', 2000) })
- .catch((err) => {
-  console.log(err);
- })
+btn.addEventListener('click', async() => {
+ try {
+  const img = await loadImage(url);
+ await container.appendChild(img);
+ } catch (error){
+  console.log(error);
+ }
+
+ try {
+  await changeColor(red, 'red', 1000);
+  await changeColor(green, 'green', 1000);
+  await changeColor(blue, 'blue', 1000);
+ } catch (error){
+  console.log(error);
+ }
 })
 
 function loadImage(url) {
@@ -42,7 +44,7 @@ function changeColor(el,color,time) {
     resolve();
    }, time);
   } else {
-   reject(new Error('failed to load image from the url'));
+   reject(new Error('there is no such element'));
   }
  })
  return promise;
