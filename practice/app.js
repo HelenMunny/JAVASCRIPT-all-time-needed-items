@@ -1,10 +1,14 @@
-let nums = [10, 3, 18, 18, 8, 4, 2];
-function getSecondLargest(nums) {
- let newNums = nums.sort(function (a, b) {
-  return b-a;
+let nums = [1, 2, 5, 3, 4];
+
+function modifyArray(nums) {
+ let newNums = nums.map(num => {
+  if (num % 2 == 0) {
+  return num * 2;
+  } else if (num % 2 !== 0) {
+ return  num * 3;
+  }
  })
- const unique = [...new Set(newNums)];
- console.log(unique[1]);
+ console.log(newNums);
 }
 
-getSecondLargest(nums)
+modifyArray(nums)

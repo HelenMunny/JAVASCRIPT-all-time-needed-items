@@ -1,13 +1,11 @@
 
-body{
- font-family: Georgia, 'Times New Roman', Times, serif;
- text-align: center;
+div{
+ height: 50px;
+ width: 50px;
+ background: #3ba59b;
+ border-radius: 50%;
 }
-h1{
- text-align: center;
-}
-img{
- width: 100%;
- height: 400px;
- object-fit: cover;
+.greyBall:hover{
+ transform: scale(2);
+ transition: 0.5s;
 }
