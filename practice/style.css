@@ -16,3 +16,9 @@ button{
  cursor: pointer;
 }
 .blue{color: blue;}
+.groceryField{
+ visibility: hidden;
+}
+.showContainer{
+ visibility: visible;
+}
