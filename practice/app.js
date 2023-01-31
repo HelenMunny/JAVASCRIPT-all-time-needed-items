@@ -13,7 +13,9 @@ let editElement;
 let edit = false;
 let editID = "";
 
-// let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+// load items
+window.addEventListener('DOMContentLoaded', setupItems);
 
 
 form.addEventListener('submit', function (e) {
@@ -22,28 +24,7 @@ form.addEventListener('submit', function (e) {
  const id = new Date().getTime().toString();
 
  if (value && edit === false) {
-  const element = document.createElement('article');
-  element.classList.add('groceryItem');
-  // add id
-  const attr = document.createAttribute('data-id');
-  attr.value = id;
-  element.setAttributeNode(attr);
-  element.innerHTML = `<p class="itemName">${value}</p>
-  <div class="buttons">
-   <button class="editBtn">edit</button>
-   <button class="deleteBtn">delete</button>
-  </div>`
-  groceryList.appendChild(element);
-
-  const deleteBtn = element.querySelector('.deleteBtn');
-  const editBtn = element.querySelector('.editBtn');
-
-  // edit and delete
-  editBtn.addEventListener('click', editItem);
-  deleteBtn.addEventListener('click', deleteItem);
-
-  // show groceryField
-  groceryField.classList.add('showContainer');
+  createListItem(id, value);
   // display alert
   showAlert('Item successfully added!', '#9ACD32');
   // add to local storage
@@ -77,7 +58,7 @@ clearBtn.addEventListener('click', function () {
  setBackToDefault();
 
  // remove from local storage
-// localStorage.removeItem('list');
+localStorage.removeItem('list');
 })
 // functions
 let showAlert = (text, color) => {
@@ -111,19 +92,86 @@ function deleteItem(e) {
  removeFromLocalStorage(id);
 }
 function editItem(e) {
+ const currItem = e.currentTarget.parentElement.parentElement;
  editElement = e.currentTarget.parentElement.previousElementSibling;
  edit = true;
- editID = editElement.dataset.id;
+ editID = currItem.dataset.id;
  submitBtn.innerHTML = 'Edit';
  input.value = editElement.textContent;
 }
 
 
 // local storage
-function addToLocalStorage(id,value) {
- console.log('add to local stprage');
+function addToLocalStorage(id, value) {
+ const grocery = { id: id, value: value };
+ let items = JSON.parse(localStorage.getItem('list')) || [];
+ items.push(grocery);
+ localStorage.setItem('list', JSON.stringify(items));
+ console.log(items);
 }
 function removeFromLocalStorage(id) {
- console.log('removed from local storage');
+ let items = JSON.parse(localStorage.getItem('list')) || [];
+ items = items.filter(function (item) {
+  if (item.id !== id) {
+   return item;
+  }
+ })
+ localStorage.setItem('list', JSON.stringify(items));
 }
-function editLocalStorage(id,value){}
+// function editLocalStorage(id, value) {
+//  let items = JSON.parse(localStorage.getItem('list')) || [];
+//  items = items.map(function (item) {
+//   if (item.id === id) {
+//    item.value = value;
+//   } 
+//    return item;
+//  })
+//  localStorage.setItem('list', JSON.stringify(items));
+// }
+
+function editLocalStorage(id, value) {
+ let items = JSON.parse(localStorage.getItem('list')) || [];
+ items = items.filter(function (item) {
+  if (item.id === id) {
+   item.value = value;
+  } 
+  return item;
+ })
+ localStorage.setItem('list', JSON.stringify(items));
+}
+
+// item load from local storage
+
+function setupItems() {
+ let items = JSON.parse(localStorage.getItem('list')) || [];
+ if (items.length > 0) {
+  items = items.forEach(function (item) {
+   createListItem(item.id, item.value);
+  })
+ }
+}
+
+// create list item
+function createListItem(id, value) {
+ const element = document.createElement('article');
+  element.classList.add('groceryItem');
+  // add id
+  const attr = document.createAttribute('data-id');
+  attr.value = id;
+  element.setAttributeNode(attr);
+  element.innerHTML = `<p class="itemName">${value}</p>
+  <div class="buttons">
+   <button class="editBtn">edit</button>
+   <button class="deleteBtn">delete</button>
+  </div>`
+ groceryList.appendChild(element);
+ 
+ const deleteBtn = element.querySelector('.deleteBtn');
+  const editBtn = element.querySelector('.editBtn');
+
+  // edit and delete
+  editBtn.addEventListener('click', editItem);
+ deleteBtn.addEventListener('click', deleteItem);
+ 
+ groceryField.classList.add('showContainer');
+}
