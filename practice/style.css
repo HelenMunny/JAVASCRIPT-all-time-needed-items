@@ -1,24 +1,8 @@
 body{
  background-color: rgb(173, 123, 219);
 }
-.container{
- text-align: center;
-}
-.groceryItem{
- display: flex;
- align-items: center;
- justify-content: space-between;
- margin-bottom: 0.5rem;
- padding: 0.25rem 1rem;
- text-transform: capitalize;
-}
-button{
- cursor: pointer;
-}
-.blue{color: blue;}
-.groceryField{
- visibility: hidden;
-}
-.showContainer{
- visibility: visible;
+img{
+ width: 100%;
+ height: 400px;
+ object-fit: cover;
 }
