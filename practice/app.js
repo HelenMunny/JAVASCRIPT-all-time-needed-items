@@ -1,37 +1,18 @@
-let heading1 = document.querySelector('.one');
-let heading2 = document.querySelector('.two');
-let heading3 = document.querySelector('.three');
-let btn = document.querySelector('.btn');
-let imgContainer = document.querySelector('.imgContainer');
-let url = 'https://source.unsplash.com/random/honey-bee'
-
-
-btn.addEventListener('click', async () => {
- try {
-  await addColor(heading1, 'red', 1000);
-  await addColor(heading2, 'green', 1000);
-  await addColor(heading3, 'blue', 1000);
+const xhr = new XMLHttpRequest();
+xhr.open('GET', '/api/api.txt')
+xhr.onreadystatechange = function () {
+ if (xhr.readyState === 4 && xhr.status === 200) {
+  const resultTxt = xhr.responseText;
+  let paragraph = document.createElement('p');
+  paragraph.innerHTML = resultTxt;
+  document.body.appendChild(paragraph);
  }
- catch (err) {
-  console.log(err);
+ else {
+  console.log({
+   status: xhr.status,
+   text: xhr.statusText
+  })
  }
- 
-})
-
-function addColor(element, color,time) {
- return new Promise((resolve, reject) => {
-  if (element) {
-   setTimeout(() => {
-    element.style.color = color;
-    resolve();
-   },time)
-  }
-  else  {
-   reject(new Error(`there is no such ${element} . failed to load`));
-  }
- })
-
 }
-
-
-
+xhr.send();
+console.log(xhr)
