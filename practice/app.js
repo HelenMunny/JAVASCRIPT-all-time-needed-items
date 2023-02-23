@@ -1,24 +1,20 @@
 const btn = document.querySelector('.btn');
-const url = '/api/json.json'
-btn.addEventListener('click', function () {
- const xhr = new XMLHttpRequest();
- xhr.open('GET', url);
- xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4 && xhr.status === 200) {
-   const resultTxt = xhr.responseText;
-   let paragraph = document.createElement('p');
-   paragraph.innerHTML = resultTxt;
-   document.body.appendChild(paragraph);
-  }
-  else {
-   console.log({
-    status: xhr.status,
-    text: xhr.statusText
-   })
-  }
- }
- xhr.send();
+const url = '/api/some.json';
+
+
+btn.addEventListener('click', async() => {
+ const resp = await fetch(url);
+ const data = await resp.json();
+ displayItems(data);
 })
 
+function displayItems(items) {
+ const displayData = items.map((item) => {
+  const { name } = item;
+  return `<p> ${name} </p>`
+ }).join('');
 
-// console.log(xhr)
+ const el = document.createElement('div');
+ el.innerHTML = displayData;
+ document.body.appendChild(el);
+}
