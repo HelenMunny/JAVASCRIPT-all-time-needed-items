@@ -71,7 +71,7 @@ body {
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
   line-height: 1.5;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
 }
 ul {
   list-style-type: none;
@@ -100,7 +100,7 @@ h3 {
   font-size: 1.25rem;
 }
 h4 {
-  font-size: 0.875rem;
+  font-size: 0.85rem;
 }
 p {
   margin-bottom: 1.25rem;
@@ -217,7 +217,7 @@ p {
 }
 .user-value {
   color: var(--clr-grey-1);
-  font-size: 28px;
+  font-size: 24px;
 }
 .values-list {
   display: grid;
@@ -245,7 +245,7 @@ p {
 
 @media screen and (min-width: 800px) {
   .user-value {
-    font-size: 38px;
+    font-size: 34px;
   }
   .icon {
     font-size: 2rem;
