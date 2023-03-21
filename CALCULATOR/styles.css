@@ -1,0 +1,58 @@
+.container{
+ /* height: 100vh; */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 5rem;
+}
+.card{
+ width: 300px;
+ background-color: rgba(35, 34, 34, 0.936);
+ padding: 2rem;
+ box-shadow: 4px 4px 30px rgba(0,0,0,0.3);
+}
+.screen{
+ background-color: black;
+ height: 5rem;
+ width: 95%;
+ margin-bottom: 1.5rem;
+ border: none;
+ border-radius: 12px;
+ font-size: 2rem;
+ color: rgba(233, 223, 223, 0.936);
+ padding: 0.5rem;
+ text-align: right;
+ pointer-events: none;
+}
+.btns{
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+button{
+ flex: 0 0 22%;
+ margin: 5px 0;
+ border: none;
+ cursor: pointer;
+ height: 50px;
+ width: 60px;
+ font-size: 1.7rem;
+ padding: 0.2rem 0.5rem;
+ font-weight: bold;
+ border-radius: 10%;
+}
+.btn-yellow{
+ background-color: orange;
+}
+.btn-grey{
+ background-color: rgba(233, 223, 223, 0.936);
+}
+.back-btn{
+ background-color: blue;
+ color: rgba(233, 223, 223, 0.936);
+
+}
+.clear-btn{
+ background-color: red;
+ color: rgba(233, 223, 223, 0.936);
+}
