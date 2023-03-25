@@ -35,6 +35,15 @@ a{
  margin:2rem 1rem;
  color: grey;
 }
+.container-two{
+ text-align: center;
+ margin: 5rem 5rem;
+ color: grey;
+}
+.container-two a{
+ background-color: yellow;
+ color: gray;
+}
 .single-product{
  display: grid;
  gap: 50px;
