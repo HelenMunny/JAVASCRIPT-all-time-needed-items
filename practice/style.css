@@ -1,69 +1,68 @@
-body{
- background-color: rgb(59, 1, 1);
- font-family: Georgia, 'Times New Roman', Times, serif;
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.heading{
- text-align: center;
+.heading {
+  text-align: center;
 }
-.heading h2{
- font-size: 2rem;
- color: grey;
+.heading h2 {
+  font-size: 2rem;
+  color: grey;
 }
-button{
- padding: 10px 15px;
- margin: 5px;
- font-size: 1rem;
- font-weight: bold;
- border-radius: 20px;
- border: none;
- box-shadow: 0 0 20px rgba(255, 255, 0, 0.488);
- background: grey;
- color: black;
- cursor: pointer;
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.488);
+  background: grey;
+  color: black;
+  cursor: pointer;
 }
-img{
- height: 170px;
- width: 220px;
- border-radius: 10px;
- border: solid 3px grey;
+img {
+  height: 170px;
+  width: 220px;
+  border-radius: 10px;
+  border: solid 3px grey;
 }
-a{
- color: grey;
- text-decoration: none;
+a {
+  color: grey;
+  text-decoration: none;
 }
-.container{
- margin:2rem 1rem;
- color: grey;
+.container {
+  margin: 2rem 1rem;
+  color: grey;
 }
-.container-two{
- text-align: center;
- margin: 5rem 5rem;
- color: grey;
+.container-two {
+  text-align: center;
+  margin: 5rem 5rem;
+  color: grey;
 }
-.container-two a{
- background-color: yellow;
- color: gray;
+.container-two a {
+  background-color: yellow;
+  color: gray;
 }
-.single-product{
- display: grid;
- gap: 50px;
- grid-template-columns: 1fr 1fr;
+.single-product {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
 }
-.product-details{
-display: flex;
+.product-details {
+  display: flex;
 }
-.details{
- margin-left: 1.5rem;
+.details {
+  margin-left: 1.5rem;
 }
 
-@media screen and (max-width:768px){
- .single-product{
-  grid-template-columns: 1fr;
- }
- .product-details{
-  display: inline-block;
+@media screen and (max-width: 768px) {
+  .single-product {
+    grid-template-columns: 1fr;
   }
-  .details{
-   margin-left: 0;
+  .product-details {
+    display: inline-block;
+  }
+  .details {
+    margin-left: 0;
   }
 }
